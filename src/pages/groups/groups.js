@@ -23,6 +23,7 @@ export default function GroupsPage() {
           groupsData.map((group) => ({
             id: group.id,
             name: group.name,
+            groupType: group.groupType.name,
             people: group.people,
             personCount: group.people.length,
           }))
@@ -41,13 +42,15 @@ export default function GroupsPage() {
       showBorders={true}
     >
       {/* Define la primera columna con el campo 'id' y un ancho de 50 píxeles. */}
-      <Column dataField="id" width={50} />
+      <Column dataField="id" caption="Id" width={50} />
 
       {/* Define la segunda columna con el campo 'name'. */}
-      <Column dataField="name" />
+      <Column dataField="name" caption="Name" />
+
+      <Column dataField="groupType" caption="Group Type" />
 
       {/* Define la tercera columna con el campo 'personCount' y un título personalizado 'Number of Persons'. */}
-      <Column dataField="personCount" caption="Number of Persons" />
+      <Column dataField="personCount" caption="Number of people" />
       <Column caption="People" calculateDisplayValue={peopleString} />
       <Column />
     </DataGrid>
