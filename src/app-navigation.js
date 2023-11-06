@@ -1,22 +1,27 @@
 export const navigation = [
   {
-    text: 'Home',
-    path: '/home',
-    icon: 'home'
+    text: "Home",
+    path: "/home",
+    icon: "home",
   },
   {
-    text: 'Datagrid',
-    icon: 'folder',
+    text: "Datagrid",
+    icon: "folder",
     items: [
       {
-        text: 'Groups',
-        path: '/tasks'
+        text: "Groups",
+        path: "/groups",
       },
 
       {
-        text: 'Persons',
-        path: '/persons'
-      }
-    ]
-  }
-  ];
+        text: "Persons",
+        path: "/persons",
+      },
+
+      {
+        text: "Group types",
+        path: "/grouptypes",
+      },
+    ],
+  },
+];
